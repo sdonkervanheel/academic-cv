@@ -1,0 +1,181 @@
+% ==========================================================================
+% Academic CV — Simon Donker van Heel
+% Compile with: tectonic Simon_Donker_van_Heel_CV.tex
+% Layout inspired by the Avdeev/Dalderop job-market CVs:
+% small-caps section labels in the left margin, content on the right.
+% ==========================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[a4paper,top=2.0cm,bottom=2.4cm,left=1.9cm,right=1.9cm]{geometry}
+\usepackage{calc}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{linkblue}{RGB}{20,70,140}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue}
+
+% ---- footer -------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize Last updated: July 2026}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\hbadness=10000
+\hfuzz=2pt
+
+% ---- section machinery ---------------------------------------------------
+% Content lives in a hanging right-hand column; the small-caps label is
+% lapped into the left margin at the first line of each section.
+\newlength{\lblw}\setlength{\lblw}{2.9cm}
+\newlength{\lblgap}\setlength{\lblgap}{0.5cm}
+
+\newenvironment{cvsec}[1]{%
+  \par\addvspace{11pt}\needspace{3\baselineskip}%
+  \noindent\llap{\smash{\parbox[t]{\lblw}{\raggedright\textsc{#1}}}\hspace*{\lblgap}}%
+  \ignorespaces}{\par}
+
+% Right-aligned year/date at the end of a line (kept together in an \mbox).
+\newcommand{\yr}[1]{\unskip\ \hfill\mbox{#1}}
+\newcommand{\EUR}{\texteuro}
+
+\begin{document}
+
+% ---- header --------------------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Simon Donker van Heel}\\[6pt]
+  {\small
+    \href{mailto:donkervanheel@ese.eur.nl}{donkervanheel@ese.eur.nl}
+    \;\textbar\;
+    \href{https://tinbergen.nl/person/1875/simon-donker-van-heel}{Tinbergen Institute}
+    \;\textbar\;
+    \href{https://scholar.google.com/citations?user=-v55COUAAAAJ}{Google Scholar}
+    \;\textbar\;
+    \href{https://www.linkedin.com/in/simon-donker-van-heel-44a4b7154/}{LinkedIn}}
+\end{center}
+\vspace{2pt}
+\hrule
+\vspace{4pt}
+
+\setlength{\leftskip}{\lblw+\lblgap}
+
+% ---- contact -------------------------------------------------------------
+\begin{cvsec}{Contact Information}
+Econometric Institute, Erasmus University Rotterdam\\
+Burgemeester Oudlaan 50, 3062 PA Rotterdam, the Netherlands
+\end{cvsec}
+
+% ---- fields --------------------------------------------------------------
+\begin{cvsec}{Research Fields}
+Primary: Econometrics; Time Series Analysis\\
+Secondary: Financial Econometrics; Statistical Methodology
+\end{cvsec}
+
+% ---- education -----------------------------------------------------------
+\begin{cvsec}{Education}
+\textbf{Erasmus University Rotterdam and Tinbergen Institute} \yr{2023 -- 2027}\\
+PhD in Econometrics, expected completion August 2027\\
+Supervisors: Prof.\ Dick van Dijk and Dr.\ Rutger-Jan Lange\\[3pt]
+Research visit: Department of Statistics, Harvard University \yr{Fall 2025}\\
+\hspace*{0.35cm}Fulbright Scholar; host: Prof.\ Neil Shephard\\[6pt]
+\textbf{Tinbergen Institute} \yr{2021 -- 2023}\\
+MPhil in Economics, Advanced Econometrics track\\[6pt]
+\textbf{Vrije Universiteit Amsterdam}\\
+MSc in Econometrics and Operations Research, \textit{cum laude} \yr{2020 -- 2021}\\
+BSc in Business Analytics \yr{2016 -- 2020}\\
+Exchange semester: Nanyang Technological University, Singapore \yr{2019 -- 2020}\\
+\hspace*{0.35cm}Minor in Mathematics and Computer Science
+\end{cvsec}
+
+% ---- working papers ------------------------------------------------------
+\begin{cvsec}{Working Papers}
+``Filtering without recursion and some of its uses in financial economics'' (2026), with Neil Shephard. \textit{arXiv preprint expected August 2026.}\\[5pt]
+``\href{https://arxiv.org/abs/2512.16745}{Exponentially weighted estimands and the exponential family: Filtering, prediction and smoothing}'' (2025), with Neil Shephard.\\*
+{\small\href{https://arxiv.org/abs/2512.16745}{arXiv} \,\textbar\, \href{https://papers.tinbergen.nl/25074.pdf}{Tinbergen Institute Discussion Paper}}\\[5pt]
+``\href{https://arxiv.org/abs/2502.05021}{Gradient-based filtering under misspecification: Stability and error bounds}'' (2025), with Rutger-Jan Lange, Bram van Os, and Dick van Dijk.\\*
+{\small\href{https://arxiv.org/abs/2502.05021}{arXiv} \,\textbar\, \href{https://papers.tinbergen.nl/25006.pdf}{Tinbergen Institute Discussion Paper} \,\textbar\, \href{https://ssrn.com/abstract=5127937}{SSRN}}
+\end{cvsec}
+
+% ---- work in progress ----------------------------------------------------
+\begin{cvsec}{Work in Progress}
+``AdaDMQ: An adaptive filter for multiple time-varying quantiles''\\
+\textit{Job market paper, draft expected September 2026.}\\[5pt]
+``Implicit score-driven high-dimensional precision matrices'', with Rutger-Jan Lange, Bram van Os, and Dick van Dijk.
+\end{cvsec}
+
+% ---- grants and awards ---------------------------------------------------
+\begin{cvsec}{Grants and Awards}
+Runner-up Best Poster Award, Netherlands Econometrics Study Group \yr{2025, 2026}\\
+Fulbright Scholarship, research visit to Harvard University, \$8,000 \yr{2025}\\
+Cultuurfonds grant, \EUR 8,740 \yr{2025}\\
+Ketel 1 Fonds grant, \EUR 3,000 \yr{2025}\\
+Erasmus Research Institute of Management (ERIM) grant, \EUR 3,000 \yr{2025}\\
+Erasmus Trustfonds grant, \EUR 2,000 \yr{2025}\\
+Fundatie van de Vrijvrouwe van Renswoude, \EUR 4,210 \textit{(declined)} \yr{2025}\\
+Dr.\ Hendrik Muller Fonds grant, \EUR 3,000 \textit{(declined)} \yr{2025}\\
+\href{https://www.eur.nl/en/news/erasmus-school-economics-showcases-expertise-econometric-game-2025}{Second place} (of 31 universities, as team captain), \href{https://wceconometrics.com}{Econometric Game} \yr{2025}\\
+Best Poster Award, Netherlands Econometrics Study Group \yr{2024}\\
+I.S.E.O.\ Summer School scholarship, \EUR 1,600 \yr{2024}\\
+Tinbergen Institute scholarships and tuition waivers, around \EUR 20,000 \yr{2021 -- 2023}
+\end{cvsec}
+
+% ---- presentations -------------------------------------------------------
+\begin{cvsec}{Presentations}
+Econometric Institute Seminar, Erasmus University Rotterdam \textit{(scheduled)} \yr{2026}\\
+Netherlands Econometrics Study Group, Tilburg (poster)\\
+PhD Internal Conference (EPIC), Erasmus University Rotterdam\\[4pt]
+Statistics Department Seminar, Harvard University \yr{2025}\\
+NBER-NSF Time Series Conference, Rutgers University, New Brunswick (poster)\\
+Netherlands Econometrics Study Group, Leuven (poster)\\[4pt]
+International Association for Applied Econometrics (IAAE), Thessaloniki \yr{2024}\\
+European Economic Association -- European Meeting of the Econometric Society (EEA-ESEM), Rotterdam\\
+I.S.E.O.\ Summer School, Milan (poster)\\
+Netherlands Econometrics Study Group, Maastricht (poster)\\
+New York Camp Econometrics, Lake Placid (poster)\\
+Dynamic Econometrics Conference, University of Oxford\\
+Tinbergen Institute PhD Seminar, Amsterdam\\
+PhD Internal Conference (EPIC), Erasmus University Rotterdam
+\end{cvsec}
+
+% ---- teaching ------------------------------------------------------------
+\begin{cvsec}{Teaching Experience}
+\textbf{Erasmus University Rotterdam}\\
+Seminar Case Studies in Financial and Applied Econometrics (MSc) \yr{2025 -- 2026}\\
+Quantitative Risk Management (MSc) \yr{2023 -- present}\\
+Financial Econometrics Case Study (BSc) \yr{2023 -- 2025}\\
+Academic Skills (BSc) \yr{2023 -- 2025}\\
+Thesis supervision (BSc and MSc) \yr{2023 -- present}
+\end{cvsec}
+
+% ---- other experience ----------------------------------------------------
+\begin{cvsec}{Other Experience}
+Private Equity Intern, Nordian Capital Partners, Amsterdam \yr{2020}\\
+\strut
+\end{cvsec}
+
+% ---- personal ------------------------------------------------------------
+\begin{cvsec}{Personal Information}
+Citizenship: Dutch\\
+Languages: Dutch (native), English (fluent)\\
+Programming: MATLAB (preferred), R, Python\\
+Interests: arthouse films, padel, travelling, skiing
+\end{cvsec}
+
+% ---- references ----------------------------------------------------------
+\begin{cvsec}{References}
+Prof.\ Dick van Dijk, Erasmus University Rotterdam, \href{mailto:djvandijk@ese.eur.nl}{djvandijk@ese.eur.nl}\\
+Dr.\ Rutger-Jan Lange, Erasmus University Rotterdam, \href{mailto:lange@ese.eur.nl}{lange@ese.eur.nl}
+% Uncomment once confirmed as letter writers:
+% \\ Prof.\ Neil Shephard, Harvard University, \href{mailto:shephard@fas.harvard.edu}{shephard@fas.harvard.edu}
+% \\ Prof.\ Siem Jan Koopman, Vrije Universiteit Amsterdam, \href{mailto:s.j.koopman@vu.nl}{s.j.koopman@vu.nl}
+\end{cvsec}
+
+\end{document}
